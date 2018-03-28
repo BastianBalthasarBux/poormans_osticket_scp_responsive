@@ -1,0 +1,75 @@
+/** by Riccabona eSolutions, https://www.Riccabona.IT/ **/
+
+/** make the whole container somehow responsive/floating **/
+#container {
+  width:90% !important;
+}
+
+/** take 100% of viewport on smaller screens **/
+@media only screen and (max-width: 750px) {
+  #container {
+    width:100% !important;
+  }
+}
+
+/** let some tables grow **/
+table.list {
+  width:100%;
+}
+
+table.ticket_info {
+  width:100%;
+  max-width:960px;
+}
+
+/** remove awful fat lines around focused inputs. **/
+.input.attached.focus {
+  outline-width:0px !important;
+}
+
+/** remove border, optical spam **/
+.tixTitle.has_bottom_border {
+  border-bottom:0px !important;
+}
+
+/** make header break and grow in height **/
+#header {
+  border:0px !important;
+  height:auto !important;
+}
+
+/** make breaking logo growing header **/
+#logo {
+  display:inline !important;
+}
+
+/** small optical issue: give main-nav slightly different gray **/
+#nav {
+  background:#CCC !important;
+}
+
+/** make nav break and grow in height on small screens **/
+#nav, #sub_nav {
+  height:auto !important;
+  white-space:normal !important;
+}
+
+/** remove borders, optical spam **/
+#nav, #sub_nav, #content {
+  border:0px !important;
+}
+
+/** get rid of these awful fat lines around searchbox if it gets focus **/
+#header, #nav li.active, #nav li.inactive:hover, ul.tabs {
+  box-shadow: none !important;
+}
+
+div.content {
+  max-width: 100% !important;
+}
+
+/** remove bad looking 2px borders in bottom of thread-entry and remove at least there the border-radius **/
+.thread-entry .thread-body {
+  border-bottom:1px solid #ddd !important;
+  border-radius:0px !important;
+}
