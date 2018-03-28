@@ -6,9 +6,43 @@
 }
 
 /** take 100% of viewport on smaller screens **/
+/** for proper working on mobile devices, you have another small change to make at osticket core. **/
+/** Add viewport metatag in yourosticketroot/include/staff/header.inc.php **/
+/** Somewher in the top, where the metatags are plublished, add the following (without comment): **/
+/** <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" /> **/
+
 @media only screen and (max-width: 750px) {
   #container {
     width:100% !important;
+  }
+  /** break tables on small displays ...
+      very rough style, but due to the fact that there is no skinning api and
+      they are using tables that seems the fastest solution to that, without touching the core
+   **/
+  tr {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+  }
+  th, td {
+    display: block !important;
+    width: 100% !important;
+    text-align:center;
+    height:auto;
+    white-space:normal;
+  }
+  .truncate {
+    white-space:normal !important;
+    height:auto !important;
+    max-height:3em !important;
+    overflow:auto !important;
+  }
+  /** kill sticky bar on small devices **/
+  .sticky.bar.fixed {
+    display:none !important;
+    visibility:hidden !important;
+    position:absolute !important;
+    top: -10000px;
   }
 }
 
